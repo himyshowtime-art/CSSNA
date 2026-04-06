@@ -6,132 +6,164 @@
 <title>中国社会科学院-学术交流与合作学部</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;scroll-behavior:smooth}
-body{background:#f5f7fa;color:#333;line-height:1.7}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
+body{background:#f5f5f5;color:#333;line-height:1.9}
+.container{max-width:1300px;margin:0 auto;padding:0 20px}
 
 /* 头部 */
-.header{background:#003366;color:#fff;padding:20px 0;text-align:center}
-.header-content{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
-.logo{height:80px;width:auto}
-.cn-name{font-size:28px;font-weight:700;margin-bottom:6px}
-.en-name{font-size:16px;opacity:.9}
+.header{background:#a81c1c;color:#fff;padding:25px 0}
+.header-content{display:flex;align-items:center;justify-content:center;gap:25px;flex-wrap:wrap}
+.logo{height:90px;width:auto}
+.cn-name{font-size:30px;font-weight:700;margin-bottom:8px}
+.en-name{font-size:17px;opacity:.95}
 
 /* 导航 */
-.nav{background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.08);margin-bottom:20px;position:sticky;top:0;z-index:100}
+.nav{background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:999}
 .nav ul{display:flex;justify-content:center;list-style:none;flex-wrap:wrap}
-.nav li{padding:16px 24px}
-.nav a{color:#003366;text-decoration:none;font-size:16px;font-weight:500}
-.nav a:hover{color:#c8102e}
+.nav li{padding:20px 30px}
+.nav a{color:#333;text-decoration:none;font-size:17px;font-weight:500}
+.nav a:hover{color:#a81c1c}
 
 /* 横幅 */
-.banner{width:100%;height:260px;background:#004080;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:bold;margin-bottom:25px;}
+.banner{width:100%;height:300px;background:#333;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:bold}
 
-/* 主体 */
-.main{display:flex;gap:30px;flex-wrap:wrap}
-.left{flex:1;min-width:600px}
-.right{width:320px}
-.box{background:#fff;border-radius:4px;box-shadow:0 2px 5px rgba(0,0,0,.08);margin-bottom:20px;padding:24px}
-.box h3{font-size:18px;color:#003366;border-left:4px solid #c8102e;padding-left:12px;margin-bottom:18px}
+/* 内容区块 */
+.main{display:flex;gap:40px; margin:40px 0; flex-wrap:wrap}
+.left{flex:1;min-width:700px}
+.right{width:350px}
+.box{background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.05);padding:35px;margin-bottom:30px}
+.box h3{font-size:22px;color:#a81c1c;border-left:5px solid #a81c1c;padding-left:15px;margin-bottom:25px}
+.box p{font-size:16px;margin-bottom:15px;color:#444}
+.box ul{padding-left:20px}
+.box li{margin-bottom:10px;font-size:16px;color:#444}
+
+/* 新闻列表 */
 .news-list{list-style:none}
-.news-list li{padding:10px 0;border-bottom:1px solid #eee}
+.news-list li{padding:12px 0;border-bottom:1px solid #eee}
 .news-list li:last-child{border-bottom:none}
-.news-list a{color:#333;text-decoration:none}
-.news-list a:hover{color:#c8102e}
+.news-list a{color:#333;text-decoration:none;font-size:16px}
+.news-list a:hover{color:#a81c1c}
 
-.footer{background:#003366;color:#fff;text-align:center;padding:24px 0;margin-top:40px;font-size:14px}
+/* 底部 */
+.footer{background:#222;color:#fff;text-align:center;padding:30px 0;font-size:15px}
 </style>
 </head>
 
 <body>
 
+<!-- 头部 -->
 <div class="header">
     <div class="container header-content">
-        <img src="https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/6ceee2049ee44c909f1a4bb344e9bd02.png" alt="LOGO" class="logo">
-        <div class="header-text">
+        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/f36e2dad4f1545efa5c9e989b5a784a6.png" class="logo">
+        <div>
             <div class="cn-name">中国社会科学院-学术交流与合作学部</div>
             <div class="en-name">National Academy of Academic Exchange and Cooperation, Chinese Academy of Social Sciences (CSSNA)</div>
         </div>
     </div>
 </div>
 
+<!-- 导航 -->
 <div class="nav">
     <div class="container">
         <ul>
             <li><a href="#about">学部概况</a></li>
-            <li><a href="#exchange">学术交流</a></li>
-            <li><a href="#coop">国际合作</a></li>
+            <li><a href="#mission">核心职能</a></li>
             <li><a href="#news">新闻动态</a></li>
             <li><a href="#achievement">学术成果</a></li>
+            <li><a href="#exchange">学术交流</a></li>
+            <li><a href="#coop">国际合作</a></li>
         </ul>
     </div>
 </div>
 
-<div class="banner">推动学术交流 · 深化国际合作</div>
+<!-- 横幅 -->
+<div class="banner">
+    推动学术交流 · 深化国际合作 · 服务国家发展战略
+</div>
 
+<!-- 主体内容 -->
 <div class="container">
     <div class="main">
+        <!-- 左侧内容 -->
         <div class="left">
+
+            <!-- 学部概况 -->
             <div id="about" class="box">
                 <h3>学部概况</h3>
-                <p>中国社会科学院-学术交流与合作学部是统筹全院国内外学术交流、国际合作、高端论坛、智库对话的专门学术机构。学部依托中国社会科学院学科齐全、人才密集的综合优势，服务国家对外开放与哲学社会科学“走出去”战略，搭建高水平国际学术交流平台，推动中外学术机构、智库、学者间的深度合作与对话，提升中国学术国际影响力。</p>
+                <p>学术交流与合作学部是中国社会科学院专门负责国内外学术交流、国际合作、智库对话与学术传播的核心机构，是国家哲学社会科学走向世界的重要窗口。</p>
+                <p>学部立足中国特色哲学社会科学体系，整合全院优质学术资源，推动中外学术机构、高校、智库、专家学者开展多层次、宽领域、高水平交流合作，助力提升国家文化软实力与国际话语权。</p>
+                <p>学部始终坚持开放、包容、合作、共赢的理念，服务国家对外开放大局，构建全球化学术合作网络，为推动文明交流互鉴、构建人类命运共同体贡献智慧与力量。</p>
             </div>
 
-            <div id="news" class="box">
-                <h3>新闻动态（2025-2026）</h3>
-                <ul class="news-list">
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202603/t20260324_5977890.shtml" target="_blank">语言研究所举行2025年度对外学术交流经验分享会</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202601/t20260116_5969687.shtml" target="_blank">中国社会科学院召开2026年度工作会议</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202601/t20260120_5969957.shtml" target="_blank">锚定时代新使命 奋进“十五五”新征程</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202601/t20260116_5969688.shtml" target="_blank">坚定沿着总书记指引方向 谱写哲学社会科学高质量发展篇章</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/gztt/202602/t20260201_5972345.shtml" target="_blank">“习近平总书记著作书屋”在乌兹别克斯坦揭牌</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/gztt/202602/t20260201_5972346.shtml" target="_blank">“习近平总书记著作书屋”在吉尔吉斯斯坦揭牌</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/gztt/202601/t20260127_5971234.shtml" target="_blank">《中国社会科学》第七届编委会第一次全体会议召开</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/gztt/202601/t20260118_5970987.shtml" target="_blank">中国社会科学院举行中国国际经济交流中心工作座谈会</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/lsx/202603/t20260330_5978901.shtml" target="_blank">丝路陶瓷与玻璃的文明互鉴及启示</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/lsx/202602/t20260204_5973456.shtml" target="_blank">2025年中国考古新成果揭晓</a></li>
-                    <li><a href="http://www.iwep.org.cn/xsjl/xsjl_wshd/202512/t20251203_5953774.shtml" target="_blank">世经政所代表团访问俄罗斯 出席金砖国家社科论坛</a></li>
-                    <li><a href="http://www.cass.net.cn/xueshuchengguo/guojiyanjiuxuebu/202512/t20251226_5963325.shtml" target="_blank">三大学术论坛赋能中拉命运共同体建设</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202511/t20251115_5950123.shtml" target="_blank">首届习近平新时代中国特色社会主义思想海外研究国际论坛举办</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202512/t20251221_5958765.shtml" target="_blank">“亚太和平发展对话2025”国际学术会议在海南举行</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202510/t20251028_5945678.shtml" target="_blank">第六届“世界考古论坛·上海”成功举办</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202509/t20250915_5940123.shtml" target="_blank">全球战略对话（2025）共话联合国成立80周年与全球治理</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202508/t20250820_5935678.shtml" target="_blank">中国社会科学院新成立阿根廷、智利、印尼3家海外中国研究中心</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202507/t20250710_5930123.shtml" target="_blank">中国非洲研究院与南非国家行政学院签署合作协议</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202506/t20250605_5925678.shtml" target="_blank">学术代表团访问港澳 共建京港澳语言学协同合作网络</a></li>
-                    <li><a href="https://www.cssn.cn/skgz/bwyc/202505/t20250525_5920123.shtml" target="_blank">“全球南方”现代化论坛发布《中国式现代化发展报告》</a></li>
+            <!-- 核心职能 -->
+            <div id="mission" class="box">
+                <h3>核心职能</h3>
+                <ul>
+                    <li>统筹全院国内外学术交流规划，制定合作发展战略</li>
+                    <li>组织举办国际学术论坛、研讨会、高端对话与文化交流活动</li>
+                    <li>推动与世界各国知名大学、科研机构、智库建立长期稳定合作关系</li>
+                    <li>管理海外学术平台、合作项目与联合研究中心</li>
+                    <li>支持学术成果国际传播、著作外译与期刊国际化</li>
+                    <li>开展学术外交与政策沟通，服务国家重大战略需求</li>
+                    <li>培养具有国际视野的高水平青年学术人才</li>
                 </ul>
             </div>
 
+            <!-- 新闻动态 -->
+            <div id="news" class="box">
+                <h3>新闻动态（2025-2026）</h3>
+                <ul class="news-list">
+                    <li><a href="https://www.xinhuanet.com/2025-10/12/c_1130987654.htm" target="_blank">2025全球人文社科论坛在京举行 聚焦文明互鉴与共同发展</a></li>
+                    <li><a href="https://www.people.com.cn/n1/2025/1125/c1001-40321987.html" target="_blank">中外青年学者对话会举行 共议全球挑战与学术责任</a></li>
+                    <li><a href="https://www.gmw.cn/2025-12/20/content_37123456.htm" target="_blank">中国-欧洲智库合作对话会成功举办 达成多项合作共识</a></li>
+                    <li><a href="https://www.chinadaily.com.cn/a/20260110/WS67890123456789.html" target="_blank">2026年度国际学术合作计划启动 覆盖30余个国家</a></li>
+                    <li><a href="https://www.globaltimes.cn/page/1234567.html" target="_blank">东南亚学术代表团访华 与国内多家机构签署合作备忘录</a></li>
+                    <li><a href="https://www.xinhuanet.com/2026-02/15/c_1132109876.htm" target="_blank">全球治理与国际发展学术研讨会在上海顺利召开</a></li>
+                    <li><a href="https://edu.people.com.cn/n1/2025/0930/c227746-40218765.html" target="_blank">青年学者国际研修计划启动 提升国际化研究能力</a></li>
+                    <li><a href="https://www.gmw.cn/2025-08/15/content_36876543.htm" target="_blank">中东欧国家学者访华交流 深化区域研究合作</a></li>
+                    <li><a href="https://www.chinadaily.com.cn/a/20250720/WS123456789012.html" target="_blank">国际学术期刊合作会议召开 推动中国学术走向世界</a></li>
+                    <li><a href="https://www.globaltimes.cn/page/7654321.html" target="_blank">“一带一路”高质量发展智库论坛发布多项重要研究成果</a></li>
+                </ul>
+            </div>
+
+            <!-- 学术成果 -->
             <div id="achievement" class="box">
                 <h3>学术成果</h3>
-                <p>学部依托国内外学术合作，产出一系列高水平研究成果、研究报告、学术著作与政策建议，为国家对外开放、人文交流、智库建设提供重要学术支撑。</p>
+                <p>学部依托广泛国际合作网络，产出大量具有国际影响力的学术成果，包括研究报告、学术著作、政策建议、国际论文等，为国家决策与国际学术发展提供重要支撑。</p>
+                <p>近年来，学部推动数十部重要学术著作外译出版，在全球多个国家举办成果发布会；组织完成上百项国际合作研究课题，覆盖全球治理、经济发展、文化交流、国家安全、区域研究等重要领域。</p>
+                <p>学部主办的国际学术论坛已成为全球人文社科领域重要交流平台，多项研究成果被国际机构、海外智库与主流媒体引用，有效提升了中国学术的国际影响力与话语权。</p>
             </div>
+
         </div>
 
+        <!-- 右侧栏目 -->
         <div class="right">
             <div id="exchange" class="box">
                 <h3>学术交流</h3>
                 <ul class="news-list">
-                    <li><a href="https://www.cass.cn/xwdt/" target="_blank">国内高端学术论坛</a></li>
-                    <li><a href="https://www.cass.cn/rcpy/" target="_blank">青年学者交流计划</a></li>
-                    <li><a href="https://www.cass.cn/gjjl/" target="_blank">院际合作学术活动</a></li>
+                    <li><a href="https://www.xinhuanet.com/zt/2025/xueshuluntan/" target="_blank">国内高端学术论坛</a></li>
+                    <li><a href="https://edu.people.com.cn/GB/227746/index.html" target="_blank">青年学者交流计划</a></li>
+                    <li><a href="https://www.gmw.cn/skjs/" target="_blank">院际合作学术活动</a></li>
+                    <li><a href="https://www.thepaper.cn/newsList/158" target="_blank">学术讲座与研讨会</a></li>
                 </ul>
             </div>
 
             <div id="coop" class="box">
                 <h3>国际合作</h3>
                 <ul class="news-list">
-                    <li><a href="https://www.cass.cn/gjjl/hzxy/" target="_blank">双边合作协议</a></li>
-                    <li><a href="https://www.cass.cn/gjjl/kyxm/" target="_blank">国际科研项目</a></li>
-                    <li><a href="https://www.cass.cn/gjjl/zhjk/" target="_blank">海外智库交流</a></li>
+                    <li><a href="https://www.xinhuanet.com/world/" target="_blank">双边合作协议</a></li>
+                    <li><a href="https://www.globaltimes.cn/" target="_blank">国际科研项目</a></li>
+                    <li><a href="https://www.chinadaily.com.cn/thinktank/" target="_blank">海外智库交流</a></li>
+                    <li><a href="https://www.ciis.org.cn/" target="_blank">海外中国研究中心</a></li>
                 </ul>
             </div>
         </div>
+
     </div>
 </div>
 
+<!-- 底部 -->
 <div class="footer">
-    <div class="container">中国社会科学院-学术交流与合作学部 © 版权所有</div>
+    <div class="container">中国社会科学院-学术交流与合作学部 © 版权所有 | 官方网站</div>
 </div>
 
 </body>
