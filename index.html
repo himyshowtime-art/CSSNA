@@ -1,146 +1,503 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>中国社会科学院-学术交流与合作学部</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中国社会科学院—学术交流与合作学部</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;scroll-behavior:smooth}
-body{background:#f5f5f5;color:#333;line-height:1.9}
-.container{max-width:1300px;margin:0 auto;padding:0 20px}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft YaHei",sans-serif;
+    scroll-behavior:smooth;
+}
+body{
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.9;
+}
+.container{
+    max-width:1280px;
+    margin:0 auto;
+    padding:0 20px;
+}
 
 /* 头部 */
-.header{background:#ffffff;color:#1a1a1a;padding:14px 0 12px;border-bottom:3px solid #2f6fa5}
-.header-content{display:flex;align-items:center;justify-content:flex-start;gap:24px;flex-wrap:nowrap;max-width:1200px;margin:0 auto;padding:0 10px}
-.logo-wrap{display:flex;align-items:center;justify-content:center;flex:0 0 auto;overflow:hidden;height:120px;width:150px;background:#2f6fa5;clip-path:polygon(0 0, 85% 0, 100% 100%, 0% 100%);}
-.logo{height:170px;width:auto;object-fit:cover;display:block;transform:scale(1.28);filter:brightness(1.02);}
-.cn-name{font-size:28px;font-weight:700;margin-bottom:4px;letter-spacing:0;line-height:1.3;color:#1a1a1a}
-.en-name{font-size:14px;opacity:.9;line-height:1.5;max-width:980px;color:#4a6b8a}
+.header{
+    background:#ffffff;
+    color:#1a1a1a;
+    padding:14px 0 12px;
+    border-bottom:none;
+}
+.header-content{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:24px;
+    flex-wrap:nowrap;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 10px;
+}
+.logo-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    overflow:hidden;
+    height:120px;
+    width:190px;
+    background:#2f6fa5;
+    clip-path:polygon(0 0, 88% 0, 100% 100%, 0% 100%);
+}
+.logo{
+    height:170px;
+    width:auto;
+    object-fit:cover;
+    display:block;
+    transform:scale(1.18);
+    filter:brightness(1.02);
+}
+.cn-name{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:4px;
+    line-height:1.25;
+    color:#1a1a1a;
+}
+.en-name{
+    font-size:14px;
+    line-height:1.5;
+    color:#5a7c9c;
+    max-width:920px;
+    letter-spacing:.2px;
+}
 
 /* 导航 */
-.nav{background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:999}
-.nav ul{display:flex;justify-content:center;list-style:none;flex-wrap:wrap}
-.nav li{padding:20px 30px}
-.nav a{color:#333;text-decoration:none;font-size:17px;font-weight:500}
-.nav a:hover{color:#2f6fa5}
+.nav{
+    background:#2f6fa5;
+    box-shadow:none;
+    position:sticky;
+    top:0;
+    z-index:999;
+    border-top:1px solid #5f90bb;
+}
+.nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    flex-wrap:wrap;
+}
+.nav li{
+    padding:18px 28px;
+    position:relative;
+}
+.nav li:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:18px;
+    background:rgba(255,255,255,.28);
+}
+.nav a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:500;
+}
+.nav a:hover{
+    color:#eaf3fb;
+}
 
 /* 横幅 */
-.banner{position:relative;width:100%;height:360px;overflow:hidden;background:linear-gradient(rgba(20,45,70,.28),rgba(20,45,70,.28)),url("banner.jpg") center/cover no-repeat;background-color:#dfe7ef}
-.banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,40,58,.42),rgba(22,40,58,.18) 45%,rgba(22,40,58,.08))}
-.banner-inner{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:flex-start;color:#fff}
-.banner-text{max-width:760px}
-.banner-title{font-size:42px;font-weight:700;line-height:1.4;margin-bottom:18px;text-shadow:0 1px 2px rgba(0,0,0,0.18)}
-.banner-subtitle{font-size:18px;opacity:.98;max-width:760px;line-height:1.9;text-shadow:0 1px 2px rgba(0,0,0,0.15)}
-.banner-badge-group{display:none}
-.banner-badge{display:none}
-.banner-badge strong{display:none}
-.banner-badge span{display:none}
+.banner{
+    position:relative;
+    width:100%;
+    height:360px;
+    overflow:hidden;
+    background:
+        linear-gradient(rgba(20,45,70,.28),rgba(20,45,70,.28)),
+        url("banner.jpg") center/cover no-repeat;
+    background-color:#dfe7ef;
+}
+.banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(22,40,58,.42),rgba(22,40,58,.18) 45%,rgba(22,40,58,.08));
+}
+.banner-inner{
+    position:relative;
+    z-index:1;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    color:#fff;
+}
+.banner-text{
+    max-width:760px;
+}
+.banner-title{
+    font-size:42px;
+    font-weight:700;
+    line-height:1.4;
+    margin-bottom:18px;
+    text-shadow:0 1px 2px rgba(0,0,0,.18);
+}
+.banner-subtitle{
+    font-size:18px;
+    opacity:.98;
+    max-width:760px;
+    line-height:1.9;
+    text-shadow:0 1px 2px rgba(0,0,0,.15);
+}
 
-/* 内容区块 */
-.main{display:flex;gap:40px;margin:40px 0;flex-wrap:wrap}
-.left{flex:1;min-width:700px}
-.right{width:350px}
-.box{background:#fff;border-radius:4px;box-shadow:none;padding:28px;margin-bottom:22px;border:1px solid #e7e7e7}
-.box h3{font-size:21px;color:#2f6fa5;padding-left:0;margin-bottom:18px;font-weight:700;border-bottom:1px solid #e9edf2;padding-bottom:8px}
-.box p{font-size:16px;margin-bottom:15px;color:#444}
-.box ul{padding-left:20px}
-.box li{margin-bottom:10px;font-size:16px;color:#444}
-.section-intro{color:#666;margin-top:-8px;margin-bottom:18px}
+/* 主体 */
+.main{
+    display:flex;
+    gap:34px;
+    margin:36px 0;
+    flex-wrap:wrap;
+}
+.left{
+    flex:1;
+    min-width:700px;
+}
+.right{
+    width:300px;
+}
+
+.box{
+    background:#fff;
+    border-radius:4px;
+    box-shadow:none;
+    padding:28px;
+    margin-bottom:22px;
+    border:1px solid #e7e7e7;
+}
+.box h3{
+    font-size:21px;
+    color:#2f6fa5;
+    padding-left:0;
+    margin-bottom:18px;
+    font-weight:700;
+    border-bottom:1px solid #e9edf2;
+    padding-bottom:8px;
+}
+.box p{
+    font-size:16px;
+    margin-bottom:15px;
+    color:#444;
+}
+.box ul{
+    padding-left:20px;
+}
+.box li{
+    margin-bottom:10px;
+    font-size:16px;
+    color:#444;
+}
+.section-intro{
+    color:#666;
+    margin-top:-8px;
+    margin-bottom:18px;
+}
 
 /* 数据概览 */
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:24px}
-.stat-card{background:#fafafa;border:1px solid #eee;border-radius:6px;padding:20px;text-align:center}
-.stat-card strong{display:block;font-size:28px;color:#2f6fa5;margin-bottom:6px}
-.stat-card span{font-size:14px;color:#666}
+.stat-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:24px;
+}
+.stat-card{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:6px;
+    padding:20px;
+    text-align:center;
+}
+.stat-card strong{
+    display:block;
+    font-size:28px;
+    color:#2f6fa5;
+    margin-bottom:6px;
+}
+.stat-card span{
+    font-size:14px;
+    color:#666;
+}
 
 /* 图片模块 */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.gallery-card{border:1px solid #eee;border-radius:6px;overflow:hidden;background:#fff;box-shadow:none}
-.gallery-card img{width:100%;height:190px;display:block;object-fit:cover;background:#f3f3f3}
-.gallery-body{padding:14px 16px 16px}
-.gallery-body h4{font-size:17px;color:#222;margin-bottom:8px}
-.gallery-body p{font-size:14px;color:#666;line-height:1.8;margin:0}
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.gallery-card{
+    border:1px solid #eee;
+    border-radius:6px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:none;
+}
+.gallery-card img{
+    width:100%;
+    height:190px;
+    display:block;
+    object-fit:cover;
+    background:#f3f3f3;
+}
+.gallery-body{
+    padding:14px 16px 16px;
+}
+.gallery-body h4{
+    font-size:17px;
+    color:#222;
+    margin-bottom:8px;
+}
+.gallery-body p{
+    font-size:14px;
+    color:#666;
+    line-height:1.8;
+    margin:0;
+}
 
 /* 工作模块 */
-.feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;list-style:none;padding-left:0;margin-top:8px}
-.feature-item{background:#fafafa;border:1px solid #eee;border-radius:6px;padding:18px 18px 16px}
-.feature-item h4{font-size:18px;color:#2f6fa5;margin-bottom:8px}
-.feature-item p{font-size:15px;color:#555;margin-bottom:0}
+.feature-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    list-style:none;
+    padding-left:0;
+    margin-top:8px;
+}
+.feature-item{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:6px;
+    padding:18px 18px 16px;
+}
+.feature-item h4{
+    font-size:18px;
+    color:#2f6fa5;
+    margin-bottom:8px;
+}
+.feature-item p{
+    font-size:15px;
+    color:#555;
+    margin-bottom:0;
+}
 
 /* 新闻列表 */
-.news-list{list-style:none;padding-left:0}
-.news-list li{padding:12px 0;border-bottom:1px solid #eee}
-.news-list li:last-child{border-bottom:none}
-.news-list a{color:#333;text-decoration:none;font-size:16px;display:block;line-height:1.7}
-.news-list a:hover{color:#2f6fa5}
-.news-source{display:block;font-size:13px;color:#888;margin-top:4px}
+.news-list{
+    list-style:none;
+    padding-left:0;
+}
+.news-list li{
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+}
+.news-list li:last-child{
+    border-bottom:none;
+}
+.news-list a{
+    color:#333;
+    text-decoration:none;
+    font-size:16px;
+    display:block;
+    line-height:1.7;
+}
+.news-list a:hover{
+    color:#2f6fa5;
+}
+.news-source{
+    display:block;
+    font-size:13px;
+    color:#888;
+    margin-top:4px;
+}
 
-.news-card-list{display:grid;grid-template-columns:1fr;gap:18px}
-.news-card{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid #eee}
-.news-card:first-child{padding-top:0}
-.news-card:last-child{border-bottom:none;padding-bottom:0}
-.news-card img{width:100%;height:140px;object-fit:cover;border-radius:4px;display:block}
-.news-card-content h4{font-size:18px;line-height:1.6;color:#222;margin-bottom:8px;font-weight:600}
-.news-card-content h4 a{color:#222;text-decoration:none}
-.news-card-content h4 a:hover{color:#2f6fa5}
-.news-card-content p{font-size:14px;line-height:1.9;color:#666;margin-bottom:8px}
-.news-meta{font-size:13px;color:#888}
+/* 图文新闻 */
+.news-card-list{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+}
+.news-card{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:18px;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid #eee;
+}
+.news-card:first-child{
+    padding-top:0;
+}
+.news-card:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+}
+.news-card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:4px;
+    display:block;
+}
+.news-card-content h4{
+    font-size:18px;
+    line-height:1.6;
+    color:#222;
+    margin-bottom:8px;
+    font-weight:600;
+}
+.news-card-content h4 a{
+    color:#222;
+    text-decoration:none;
+}
+.news-card-content h4 a:hover{
+    color:#2f6fa5;
+}
+.news-card-content p{
+    font-size:14px;
+    line-height:1.9;
+    color:#666;
+    margin-bottom:8px;
+}
+.news-meta{
+    font-size:13px;
+    color:#888;
+}
 
 /* 右侧 */
-.side-figure{margin-bottom:18px;border-radius:12px;overflow:hidden;border:1px solid #eee}
-.side-figure img{width:100%;height:190px;object-fit:cover;display:block}
-.side-figure-caption{padding:12px 14px;background:#fafafa;font-size:14px;color:#666;line-height:1.7}
-.contact-list{list-style:none;padding-left:0}
-.contact-list li{padding:10px 0;border-bottom:1px dashed #eee;font-size:15px;color:#555}
-.contact-list li:last-child{border-bottom:none}
+.side-figure{
+    margin-bottom:18px;
+    border-radius:6px;
+    overflow:hidden;
+    border:1px solid #eee;
+    background:#fff;
+}
+.side-figure img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    display:block;
+}
+.side-figure-caption{
+    padding:12px 14px;
+    background:#fafafa;
+    font-size:14px;
+    color:#666;
+    line-height:1.7;
+}
+.contact-list{
+    list-style:none;
+    padding-left:0;
+}
+.contact-list li{
+    padding:10px 0;
+    border-bottom:1px dashed #eee;
+    font-size:15px;
+    color:#555;
+}
+.contact-list li:last-child{
+    border-bottom:none;
+}
 
 /* 底部 */
-.footer{background:#222;color:#fff;text-align:center;padding:30px 0;font-size:15px}
+.footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:30px 0;
+    font-size:15px;
+}
 
 /* 响应式 */
-@media (max-width: 1100px){
-  .left{min-width:100%}
-  .right{width:100%}
-  .banner-inner{justify-content:flex-start}
-  .gallery-grid,.stat-grid,.feature-list{grid-template-columns:repeat(2,1fr)}
+@media (max-width:1100px){
+    .left{min-width:100%}
+    .right{width:100%}
+    .banner-inner{justify-content:flex-start}
+    .gallery-grid,.stat-grid,.feature-list{grid-template-columns:repeat(2,1fr)}
 }
-@media (max-width: 768px){
-  .header-content{gap:12px;flex-wrap:wrap;justify-content:center}
-  .logo-wrap{padding:0}
-  .logo{height:72px}
-  .cn-name{font-size:22px;text-align:center}
-  .en-name{font-size:13px;text-align:center}
-  .cn-name{font-size:24px}
-  .en-name{font-size:14px}
-  .nav li{padding:14px 16px}
-  .banner{height:auto;min-height:300px}
-  .banner-inner{padding:42px 0}
-  .banner-title{font-size:30px}
-  .banner-subtitle{font-size:16px}
-  .box{padding:24px}
-  .gallery-grid,.stat-grid,.feature-list,.banner-badge-group{grid-template-columns:1fr}
-  .news-card{grid-template-columns:1fr}
-  .news-card img{height:200px}
+@media (max-width:768px){
+    .header-content{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .logo-wrap{
+        width:150px;
+        height:96px;
+        clip-path:polygon(0 0, 88% 0, 100% 100%, 0% 100%);
+    }
+    .logo{
+        height:132px;
+        transform:scale(1.12);
+    }
+    .cn-name{
+        font-size:24px;
+        text-align:center;
+    }
+    .en-name{
+        font-size:13px;
+        text-align:center;
+    }
+    .nav li{
+        padding:14px 16px;
+    }
+    .nav li:not(:last-child)::after{
+        display:none;
+    }
+    .banner{
+        height:auto;
+        min-height:300px;
+    }
+    .banner-inner{
+        padding:42px 0;
+    }
+    .banner-title{
+        font-size:30px;
+    }
+    .banner-subtitle{
+        font-size:16px;
+    }
+    .box{
+        padding:24px;
+    }
+    .gallery-grid,.stat-grid,.feature-list{
+        grid-template-columns:1fr;
+    }
+    .news-card{
+        grid-template-columns:1fr;
+    }
+    .news-card img{
+        height:200px;
+    }
 }
 </style>
 </head>
-
 <body>
 
-<!-- 头部 -->
 <div class="header">
     <div class="container header-content">
         <div class="logo-wrap">
             <img src="pic0.jpg" class="logo" alt="中国社会科学院logo">
         </div>
         <div>
-            <div class="cn-name">中国社会科学院-学术交流与合作学部</div>
-            <div class="en-name">National Academy of Academic Exchange and Cooperation, Chinese Academy of Social Sciences (CSSNA)</div>
+            <div class="cn-name">中国社会科学院—学术交流与合作学部</div>
+            <div class="en-name">Division of Academic Exchange and Cooperation, Chinese Academy of Social Sciences</div>
         </div>
     </div>
 </div>
 
-<!-- 导航 -->
 <div class="nav">
     <div class="container">
         <ul>
@@ -154,8 +511,6 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
     </div>
 </div>
 
-<!-- 横幅 -->
-<!-- 横幅区使用本地 banner.jpg，如仍异常请强制刷新缓存 -->
 <div class="banner">
     <div class="container banner-inner">
         <div class="banner-text">
@@ -165,49 +520,35 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
     </div>
 </div>
 
-<!-- 主体内容 -->
 <div class="container">
     <div class="main">
-        <!-- 左侧内容 -->
         <div class="left">
 
-            <!-- 机构依托 -->
             <div class="box">
                 <h3>机构简介</h3>
-                <p><strong>中国社会科学院-学术交流与合作学部：</strong>学术交流与合作学部是中国社会科学院下设的重要业务机构，主要负责统筹推进全院国内外学术交流与国际合作工作，组织开展高水平学术论坛、国际会议与智库对话，推动学术成果国际传播与合作研究平台建设。</p>
+                <p><strong>中国社会科学院—学术交流与合作学部：</strong>学术交流与合作学部是中国社会科学院下设的重要业务机构，主要负责统筹推进全院国内外学术交流与国际合作工作，组织开展高水平学术论坛、国际会议与智库对话，推动学术成果国际传播与合作研究平台建设。</p>
                 <p>学部依托中国社会科学院综合研究优势与高端智库资源，围绕全球治理、区域发展与人文交流等重点领域，搭建多层次学术合作网络，促进中外学者深度交流与协同研究，不断提升中国哲学社会科学的国际影响力与话语权。</p>
-                <p><strong>About the Division:</strong> The Division of Academic Exchange and Cooperation is a key unit under the Chinese Academy of Social Sciences (CASS), responsible for coordinating domestic and international academic exchange, organizing high-level forums and international conferences, and promoting global research collaboration and academic dissemination.</p>
+                <p><strong>About the Division:</strong> The Division of Academic Exchange and Cooperation is a key unit under the Chinese Academy of Social Sciences, responsible for coordinating domestic and international academic exchange, organizing high-level forums and international conferences, and promoting global research collaboration and academic dissemination.</p>
                 <p>Leveraging the comprehensive research strengths and think tank resources of CASS, the Division focuses on global governance, regional development, and cultural exchange, fostering multi-level academic cooperation networks and enhancing the international impact of Chinese scholarship.</p>
-                <div class="box" style="margin-top:20px">
-                <h3>联系方式 | Contact</h3>
+            </div>
+
+            <div class="box">
+                <h3>联系方式</h3>
                 <ul class="contact-list">
                     <li>地址：北京市东城区建国门内大街5号（中国社会科学院）</li>
-                    <li>Email：info@cssna.org.cn</li>
-                    
+                    <li>邮箱：info@cssna.org.cn</li>
                 </ul>
             </div>
-            </div>
 
-            <!-- 学部概况 -->
             <div class="box">
-                <img src="pic1.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;margin-bottom:20px;">
-            </div>
-
-            <div class="box" style="padding:0;overflow:hidden;">
-                <div style="position:relative;">
-                    <img src="pic12.jpg" style="width:100%;height:320px;object-fit:cover;display:block;">
-                    <div style="position:absolute;left:0;right:0;bottom:0;padding:22px 26px;background:linear-gradient(to top, rgba(16,34,52,.68), rgba(16,34,52,.18), rgba(16,34,52,0));color:#fff;">
-                        <div style="font-size:24px;font-weight:700;line-height:1.5;margin-bottom:6px;">学术交流与合作会议现场</div>
-                        <div style="font-size:14px;line-height:1.8;opacity:.96;max-width:780px;">围绕国际学术合作、智库对话、成果传播与平台建设等重点方向，持续推进高水平、多层次、机制化交流合作。</div>
-                    </div>
-                </div>
+                <img src="pic12.jpg" style="width:100%;height:320px;object-fit:cover;border-radius:6px;display:block;" alt="学术交流与合作会议现场">
             </div>
 
             <div id="about" class="box">
                 <h3>学部概况</h3>
-                <p>学术交流与合作学部是中国社会科学院专门负责国内外学术交流、国际合作、智库对话与学术传播的核心机构，是国家哲学社会科学走向世界的重要窗口。</p>
+                <p>学术交流与合作学部是中国社会科学院专门负责国内外学术交流、国际合作、智库对话与学术传播的重要业务机构，是国家哲学社会科学走向世界的重要窗口。</p>
                 <p>学部立足中国特色哲学社会科学体系，整合全院优质学术资源，推动中外学术机构、高校、智库、专家学者开展多层次、宽领域、高水平交流合作，助力提升国家文化软实力与国际话语权。</p>
-                <p>学部始终坚持开放、包容、合作、共赢的理念，服务国家对外开放大局，构建全球化学术合作网络，为推动文明交流互鉴、构建人类命运共同体贡献智慧与力量。</p>
+                <p>学部坚持开放、包容、合作、共赢的理念，服务国家对外开放大局，构建全球化学术合作网络，为推动文明交流互鉴、构建人类命运共同体贡献智慧与力量。</p>
                 <div class="stat-grid">
                     <div class="stat-card"><strong>国际化</strong><span>持续拓展全球学术伙伴网络</span></div>
                     <div class="stat-card"><strong>机制化</strong><span>打造常态化学术交流平台</span></div>
@@ -216,12 +557,10 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </div>
             </div>
 
-            <!-- 图片插入：会议场景 -->
             <div class="box">
-                <img src="pic1.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
+                <img src="pic1.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;" alt="会议图片1">
             </div>
 
-            <!-- 核心职能 -->
             <div id="mission" class="box">
                 <h3>核心职能</h3>
                 <ul>
@@ -235,32 +574,30 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </ul>
             </div>
 
-            <!-- 图片插入：会议中心 -->
             <div class="box">
-                <img src="pic2.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
+                <img src="pic2.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;" alt="会议图片2">
             </div>
 
-            <!-- 专题图集 -->
             <div class="box">
                 <h3>交流活动</h3>
-                <p class="section-intro">选用新华社等主流媒体公开新闻图片，更贴近国内机构官网常见的信息展示风格。</p>
+                <p class="section-intro">围绕高端论坛、国际会议、成果发布和智库对话等重点场景，持续推进多层次学术交流合作。</p>
                 <div class="gallery-grid">
                     <div class="gallery-card">
-                        <img alt="重点会议现场" src="pic3.jpg">
+                        <img src="pic3.jpg" alt="论坛会议与专题研讨">
                         <div class="gallery-body">
                             <h4>论坛会议与专题研讨</h4>
                             <p>围绕重点议题组织论坛、研讨会与学术交流活动，强化学界、智库与研究机构之间的高水平对话。</p>
                         </div>
                     </div>
                     <div class="gallery-card">
-                        <img alt="国际论坛会议现场" src="pic4.jpg">
+                        <img src="pic4.jpg" alt="国际合作与会议平台">
                         <div class="gallery-body">
                             <h4>国际合作与会议平台</h4>
                             <p>依托高层次论坛、国际会议与合作平台，持续拓展与高校、科研机构和智库之间的交流合作网络。</p>
                         </div>
                     </div>
                     <div class="gallery-card">
-                        <img alt="大会堂会议场景" src="pic5.jpg">
+                        <img src="pic5.jpg" alt="成果发布与活动展示">
                         <div class="gallery-body">
                             <h4>成果发布与活动展示</h4>
                             <p>围绕研究报告、专题成果和重点活动开展发布与展示，增强学术成果传播的专业性与规范性。</p>
@@ -269,7 +606,6 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </div>
             </div>
 
-            <!-- 要闻 / 通知公告 -->
             <div class="box">
                 <h3>要闻动态</h3>
                 <div class="news-card-list">
@@ -300,15 +636,14 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </div>
             </div>
 
-            <!-- 图片插入：论坛现场 -->
             <div class="box">
-                <img src="pic9.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
-            </div>
-            <div class="box">
-                <img src="pic10.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
+                <img src="pic9.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;" alt="会议图片9">
             </div>
 
-            <!-- 新闻动态 -->
+            <div class="box">
+                <img src="pic10.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;" alt="会议图片10">
+            </div>
+
             <div id="news" class="box">
                 <h3>新闻动态</h3>
                 <ul class="news-list">
@@ -333,19 +668,11 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                         <span class="news-source">来源：光明网</span>
                     </li>
                     <li>
-                        <a href="https://www.cass.cn/" target="_blank" rel="noopener noreferrer">中国社会科学院新闻与传播研究网：学术前沿与专题内容</a>
+                        <a href="https://www.cass.cn/" target="_blank" rel="noopener noreferrer">中国社会科学院官网：机构动态与学术资讯</a>
                         <span class="news-source">来源：中国社会科学院</span>
                     </li>
                     <li>
-                        <a href="https://www.cass.cn/" target="_blank" rel="noopener noreferrer">中国社会科学院大学新闻传播学院：学院资讯与讲座通知</a>
-                        <span class="news-source">来源：中国社会科学院</span>
-                    </li>
-                    <li>
-                        <a href="https://www.news.cn/local/" target="_blank" rel="noopener noreferrer">新华网北京频道：首都重要活动与学术论坛资讯</a>
-                        <span class="news-source">来源：新华网</span>
-                    </li>
-                    <li>
-                        <a href="https://www.news.cn/" target="_blank" rel="noopener noreferrer">新华网长三角频道：区域协同发展与创新合作信息</a>
+                        <a href="https://www.news.cn/local/" target="_blank" rel="noopener noreferrer">新华网地方频道：区域论坛与活动资讯</a>
                         <span class="news-source">来源：新华网</span>
                     </li>
                     <li>
@@ -355,12 +682,10 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </ul>
             </div>
 
-            <!-- 图片插入：交流活动 -->
             <div class="box">
-                <img src="pic11.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
+                <img src="pic11.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;" alt="会议图片11">
             </div>
 
-            <!-- 合作项目 -->
             <div class="box">
                 <h3>重点合作项目</h3>
                 <p class="section-intro">围绕全球治理、区域发展、文化交流等重点方向，推进多项国际合作研究与交流项目。</p>
@@ -373,7 +698,6 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </ul>
             </div>
 
-            <!-- 学术成果 -->
             <div id="achievement" class="box">
                 <h3>学术成果</h3>
                 <p>学部依托广泛国际合作网络，产出大量具有国际影响力的学术成果，包括研究报告、学术著作、政策建议、国际论文等，为国家决策与国际学术发展提供重要支撑。</p>
@@ -406,8 +730,12 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 
         </div>
 
-        <!-- 右侧栏目 -->
         <div class="right">
+            <div class="side-figure">
+                <img src="pic6.jpg" alt="高层次学术会议现场">
+                <div class="side-figure-caption">高层次学术会议现场</div>
+            </div>
+
             <div class="box">
                 <h3>通知公告</h3>
                 <ul class="news-list">
@@ -432,7 +760,6 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 <h3>联系与服务</h3>
                 <ul class="contact-list">
                     <li>办公地址：北京市东城区建国门内大街5号（中国社会科学院）</li>
-                    
                     <li>电子邮箱：info@cssna.org.cn</li>
                     <li>服务方向：学术论坛、国际合作、智库交流、成果传播</li>
                     <li>工作机制：项目统筹、活动组织、专题联络、合作对接</li>
@@ -442,21 +769,24 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
             <div id="coop" class="box">
                 <h3>国际合作</h3>
                 <ul class="news-list">
-                    <li><a href="https://www.xinhuanet.com/worldpro/gjxw/index.html" target="_blank" rel="noopener noreferrer">国际合作与全球要闻</a></li>
-                    <li><a href="https://www.chinadaily.com.cn/thinktank/" target="_blank" rel="noopener noreferrer">海外智库与国际传播</a></li>
+                    <li><a href="https://www.news.cn/world/" target="_blank" rel="noopener noreferrer">国际合作与全球要闻</a></li>
+                    <li><a href="https://www.chinadaily.com.cn/china/thinktank" target="_blank" rel="noopener noreferrer">海外智库与国际传播</a></li>
                     <li><a href="https://www.ciis.org.cn/" target="_blank" rel="noopener noreferrer">国际问题研究与合作平台</a></li>
                     <li><a href="https://www.cass.cn/" target="_blank" rel="noopener noreferrer">学术期刊与研究成果展示</a></li>
                 </ul>
             </div>
-        </div>
 
+            <div class="side-figure">
+                <img src="pic7.jpg" alt="国际学术交流活动">
+                <div class="side-figure-caption">国际学术交流活动</div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- 底部 -->
 <div class="footer">
     <div class="container">
-        中国社会科学院-学术交流与合作学部 © 版权所有<br>
+        中国社会科学院—学术交流与合作学部 © 版权所有<br>
         地址：北京市东城区建国门内大街5号 ｜ 邮箱：info@cssna.org.cn
     </div>
 </div>
