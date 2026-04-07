@@ -12,7 +12,7 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 /* 头部 */
 .header{background:#a81c1c;color:#fff;padding:25px 0}
 .header-content{display:flex;align-items:center;justify-content:center;gap:25px;flex-wrap:wrap}
-.logo{height:90px;width:auto}
+.logo{height:90px;width:auto;object-fit:contain}
 .cn-name{font-size:30px;font-weight:700;margin-bottom:8px}
 .en-name{font-size:17px;opacity:.95}
 
@@ -24,10 +24,10 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 .nav a:hover{color:#a81c1c}
 
 /* 横幅 */
-.banner{width:100%;height:300px;background:#333;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:bold}
+.banner{width:100%;height:300px;background:#333;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:bold;text-align:center;padding:0 20px}
 
 /* 内容区块 */
-.main{display:flex;gap:40px; margin:40px 0; flex-wrap:wrap}
+.main{display:flex;gap:40px;margin:40px 0;flex-wrap:wrap}
 .left{flex:1;min-width:700px}
 .right{width:350px}
 .box{background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.05);padding:35px;margin-bottom:30px}
@@ -37,14 +37,28 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 .box li{margin-bottom:10px;font-size:16px;color:#444}
 
 /* 新闻列表 */
-.news-list{list-style:none}
+.news-list{list-style:none;padding-left:0}
 .news-list li{padding:12px 0;border-bottom:1px solid #eee}
 .news-list li:last-child{border-bottom:none}
-.news-list a{color:#333;text-decoration:none;font-size:16px}
+.news-list a{color:#333;text-decoration:none;font-size:16px;display:block;line-height:1.7}
 .news-list a:hover{color:#a81c1c}
+.news-source{display:block;font-size:13px;color:#888;margin-top:4px}
 
 /* 底部 */
 .footer{background:#222;color:#fff;text-align:center;padding:30px 0;font-size:15px}
+
+/* 响应式 */
+@media (max-width: 1100px){
+  .left{min-width:100%}
+  .right{width:100%}
+}
+@media (max-width: 768px){
+  .cn-name{font-size:24px}
+  .en-name{font-size:14px}
+  .nav li{padding:14px 16px}
+  .banner{height:220px;font-size:22px}
+  .box{padding:24px}
+}
 </style>
 </head>
 
@@ -53,7 +67,7 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 <!-- 头部 -->
 <div class="header">
     <div class="container header-content">
-        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/f36e2dad4f1545efa5c9e989b5a784a6.png" class="logo">
+        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/f36e2dad4f1545efa5c9e989b5a784a6.png" class="logo" alt="机构标识">
         <div>
             <div class="cn-name">中国社会科学院-学术交流与合作学部</div>
             <div class="en-name">National Academy of Academic Exchange and Cooperation, Chinese Academy of Social Sciences (CSSNA)</div>
@@ -110,18 +124,48 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 
             <!-- 新闻动态 -->
             <div id="news" class="box">
-                <h3>新闻动态（2025-2026）</h3>
+                <h3>新闻动态</h3>
                 <ul class="news-list">
-                    <li><a href="https://www.xinhuanet.com/2025-10/12/c_1130987654.htm" target="_blank">2025全球人文社科论坛在京举行 聚焦文明互鉴与共同发展</a></li>
-                    <li><a href="https://www.people.com.cn/n1/2025/1125/c1001-40321987.html" target="_blank">中外青年学者对话会举行 共议全球挑战与学术责任</a></li>
-                    <li><a href="https://www.gmw.cn/2025-12/20/content_37123456.htm" target="_blank">中国-欧洲智库合作对话会成功举办 达成多项合作共识</a></li>
-                    <li><a href="https://www.chinadaily.com.cn/a/20260110/WS67890123456789.html" target="_blank">2026年度国际学术合作计划启动 覆盖30余个国家</a></li>
-                    <li><a href="https://www.globaltimes.cn/page/1234567.html" target="_blank">东南亚学术代表团访华 与国内多家机构签署合作备忘录</a></li>
-                    <li><a href="https://www.xinhuanet.com/2026-02/15/c_1132109876.htm" target="_blank">全球治理与国际发展学术研讨会在上海顺利召开</a></li>
-                    <li><a href="https://edu.people.com.cn/n1/2025/0930/c227746-40218765.html" target="_blank">青年学者国际研修计划启动 提升国际化研究能力</a></li>
-                    <li><a href="https://www.gmw.cn/2025-08/15/content_36876543.htm" target="_blank">中东欧国家学者访华交流 深化区域研究合作</a></li>
-                    <li><a href="https://www.chinadaily.com.cn/a/20250720/WS123456789012.html" target="_blank">国际学术期刊合作会议召开 推动中国学术走向世界</a></li>
-                    <li><a href="https://www.globaltimes.cn/page/7654321.html" target="_blank">“一带一路”高质量发展智库论坛发布多项重要研究成果</a></li>
+                    <li>
+                        <a href="https://www.xinhuanet.com/politics/" target="_blank" rel="noopener noreferrer">新华网时政频道：权威国内时政与重要会议报道</a>
+                        <span class="news-source">来源：新华网</span>
+                    </li>
+                    <li>
+                        <a href="https://www.xinhuanet.com/worldpro/gjxw/index.html" target="_blank" rel="noopener noreferrer">新华网国际要闻：国际局势与全球合作动态</a>
+                        <span class="news-source">来源：新华网</span>
+                    </li>
+                    <li>
+                        <a href="https://edu.people.com.cn/" target="_blank" rel="noopener noreferrer">人民网教育频道：高校、学术与青年发展资讯</a>
+                        <span class="news-source">来源：人民网</span>
+                    </li>
+                    <li>
+                        <a href="https://www.gmw.cn/xueshu/" target="_blank" rel="noopener noreferrer">光明网学术频道：学术前沿、论文研究与会议动态</a>
+                        <span class="news-source">来源：光明网</span>
+                    </li>
+                    <li>
+                        <a href="https://theory.gmw.cn/node_80173.htm" target="_blank" rel="noopener noreferrer">光明网理论学术动态导读：最新理论与学术观察</a>
+                        <span class="news-source">来源：光明网</span>
+                    </li>
+                    <li>
+                        <a href="https://xinwen.cass.cn/bdtj/" target="_blank" rel="noopener noreferrer">中国社会科学院新闻与传播研究网：学术前沿与专题内容</a>
+                        <span class="news-source">来源：中国社会科学院</span>
+                    </li>
+                    <li>
+                        <a href="https://xinwen.cass.cn/xytz/index_1.shtml" target="_blank" rel="noopener noreferrer">中国社会科学院大学新闻传播学院：学院资讯与讲座通知</a>
+                        <span class="news-source">来源：中国社会科学院</span>
+                    </li>
+                    <li>
+                        <a href="https://www.bj.xinhuanet.com/" target="_blank" rel="noopener noreferrer">新华网北京频道：首都重要活动与学术论坛资讯</a>
+                        <span class="news-source">来源：新华网</span>
+                    </li>
+                    <li>
+                        <a href="https://csj.xinhuanet.com/" target="_blank" rel="noopener noreferrer">新华网长三角频道：区域协同发展与创新合作信息</a>
+                        <span class="news-source">来源：新华网</span>
+                    </li>
+                    <li>
+                        <a href="https://www.chinadaily.com.cn/thinktank/" target="_blank" rel="noopener noreferrer">中国日报智库频道：国际传播与智库观察</a>
+                        <span class="news-source">来源：中国日报</span>
+                    </li>
                 </ul>
             </div>
 
@@ -140,20 +184,20 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
             <div id="exchange" class="box">
                 <h3>学术交流</h3>
                 <ul class="news-list">
-                    <li><a href="https://www.xinhuanet.com/zt/2025/xueshuluntan/" target="_blank">国内高端学术论坛</a></li>
-                    <li><a href="https://edu.people.com.cn/GB/227746/index.html" target="_blank">青年学者交流计划</a></li>
-                    <li><a href="https://www.gmw.cn/skjs/" target="_blank">院际合作学术活动</a></li>
-                    <li><a href="https://www.thepaper.cn/newsList/158" target="_blank">学术讲座与研讨会</a></li>
+                    <li><a href="https://www.gmw.cn/xueshu/node_23638.htm" target="_blank" rel="noopener noreferrer">学术会议与论坛</a></li>
+                    <li><a href="https://edu.people.com.cn/GB/xiaoyuan/112230/" target="_blank" rel="noopener noreferrer">高校与青年学术活动</a></li>
+                    <li><a href="https://www.gmw.cn/xueshu/node_23639.htm" target="_blank" rel="noopener noreferrer">学术争鸣与专题讨论</a></li>
+                    <li><a href="https://theory.gmw.cn/" target="_blank" rel="noopener noreferrer">理论学习与专题研讨</a></li>
                 </ul>
             </div>
 
             <div id="coop" class="box">
                 <h3>国际合作</h3>
                 <ul class="news-list">
-                    <li><a href="https://www.xinhuanet.com/world/" target="_blank">双边合作协议</a></li>
-                    <li><a href="https://www.globaltimes.cn/" target="_blank">国际科研项目</a></li>
-                    <li><a href="https://www.chinadaily.com.cn/thinktank/" target="_blank">海外智库交流</a></li>
-                    <li><a href="https://www.ciis.org.cn/" target="_blank">海外中国研究中心</a></li>
+                    <li><a href="https://www.xinhuanet.com/worldpro/gjxw/index.html" target="_blank" rel="noopener noreferrer">国际合作与全球要闻</a></li>
+                    <li><a href="https://www.chinadaily.com.cn/thinktank/" target="_blank" rel="noopener noreferrer">海外智库与国际传播</a></li>
+                    <li><a href="https://www.ciis.org.cn/" target="_blank" rel="noopener noreferrer">国际问题研究与合作平台</a></li>
+                    <li><a href="https://xinwen.cass.cn/xszy/xwycbyj/" target="_blank" rel="noopener noreferrer">学术期刊与研究成果展示</a></li>
                 </ul>
             </div>
         </div>
