@@ -24,16 +24,16 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 .nav a:hover{color:#a81c1c}
 
 /* 横幅 */
-.banner{position:relative;width:100%;height:380px;overflow:hidden;background:linear-gradient(135deg,#6b1010,#a81c1c 55%,#c73c3c)}
-.banner::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.35)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 700'%3E%3Crect width='1600' height='700' fill='%23b02626'/%3E%3Cg opacity='0.22'%3E%3Crect x='90' y='260' width='120' height='300' fill='white'/%3E%3Crect x='250' y='220' width='145' height='340' fill='white'/%3E%3Crect x='435' y='180' width='160' height='380' fill='white'/%3E%3Crect x='635' y='240' width='130' height='320' fill='white'/%3E%3Crect x='805' y='160' width='170' height='400' fill='white'/%3E%3Crect x='1015' y='210' width='145' height='350' fill='white'/%3E%3Crect x='1200' y='260' width='125' height='300' fill='white'/%3E%3Crect x='1365' y='200' width='150' height='360' fill='white'/%3E%3C/g%3E%3Cpath d='M0 560 C180 520 320 600 500 560 C720 510 850 620 1060 560 C1260 500 1390 575 1600 535 L1600 700 L0 700 Z' fill='rgba(255,255,255,0.12)'/%3E%3C/svg%3E");background-size:cover;background-position:center}
-.banner-inner{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff}
-.banner-text{max-width:720px}
-.banner-title{font-size:38px;font-weight:700;line-height:1.4;margin-bottom:18px}
-.banner-subtitle{font-size:18px;opacity:.96;max-width:640px}
-.banner-badge-group{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;min-width:360px}
-.banner-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(4px);border-radius:14px;padding:16px 18px;text-align:center}
-.banner-badge strong{display:block;font-size:22px;margin-bottom:2px}
-.banner-badge span{font-size:14px;opacity:.95}
+.banner{position:relative;width:100%;height:320px;overflow:hidden;background:linear-gradient(rgba(110,20,20,.55),rgba(110,20,20,.55)),url("https://www.cass.cn/images/logo.png") center/120px no-repeat,#8f1d1d}
+.banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.08))}
+.banner-inner{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:flex-start;color:#fff}
+.banner-text{max-width:760px}
+.banner-title{font-size:34px;font-weight:700;line-height:1.45;margin-bottom:16px}
+.banner-subtitle{font-size:17px;opacity:.96;max-width:650px}
+.banner-badge-group{display:none}
+.banner-badge{display:none}
+.banner-badge strong{display:none}
+.banner-badge span{display:none}
 
 /* 内容区块 */
 .main{display:flex;gap:40px;margin:40px 0;flex-wrap:wrap}
@@ -48,21 +48,21 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 
 /* 数据概览 */
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:24px}
-.stat-card{background:linear-gradient(180deg,#fff,#faf6f6);border:1px solid #f0e1e1;border-radius:12px;padding:20px;text-align:center}
+.stat-card{background:#fafafa;border:1px solid #eee;border-radius:6px;padding:20px;text-align:center}
 .stat-card strong{display:block;font-size:28px;color:#a81c1c;margin-bottom:6px}
 .stat-card span{font-size:14px;color:#666}
 
 /* 图片模块 */
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.gallery-card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.04)}
-.gallery-card img{width:100%;height:200px;display:block;object-fit:cover;background:#f3f3f3}
+.gallery-card{border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fff;box-shadow:none}
+.gallery-card img{width:100%;height:180px;display:block;object-fit:cover;background:#f3f3f3}
 .gallery-body{padding:16px}
-.gallery-body h4{font-size:18px;color:#222;margin-bottom:8px}
+.gallery-body h4{font-size:17px;color:#222;margin-bottom:8px}
 .gallery-body p{font-size:14px;color:#666;line-height:1.8;margin:0}
 
 /* 工作模块 */
 .feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;list-style:none;padding-left:0;margin-top:8px}
-.feature-item{background:#fafafa;border:1px solid #eee;border-radius:12px;padding:18px 18px 16px}
+.feature-item{background:#fafafa;border:1px solid #eee;border-radius:6px;padding:18px 18px 16px}
 .feature-item h4{font-size:18px;color:#a81c1c;margin-bottom:8px}
 .feature-item p{font-size:15px;color:#555;margin-bottom:0}
 
@@ -89,6 +89,10 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 @media (max-width: 1100px){
   .left{min-width:100%}
   .right{width:100%}
+  .banner-inner{justify-content:flex-start}
+  .gallery-grid,.stat-grid,.feature-list{grid-template-columns:repeat(2,1fr)}
+}
+  .right{width:100%}
   .banner-inner{flex-direction:column;justify-content:center;text-align:center}
   .banner-badge-group{min-width:unset;width:100%;max-width:720px}
   .gallery-grid,.stat-grid,.feature-list{grid-template-columns:repeat(2,1fr)}
@@ -112,7 +116,7 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 <!-- 头部 -->
 <div class="header">
     <div class="container header-content">
-        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/f36e2dad4f1545efa5c9e989b5a784a6.png" class="logo" alt="机构标识">
+        <img src="https://www.cass.cn/images/logo.png" class="logo" alt="中国社会科学院logo">
         <div>
             <div class="cn-name">中国社会科学院-学术交流与合作学部</div>
             <div class="en-name">National Academy of Academic Exchange and Cooperation, Chinese Academy of Social Sciences (CSSNA)</div>
@@ -138,14 +142,8 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 <div class="banner">
     <div class="container banner-inner">
         <div class="banner-text">
-            <div class="banner-title">构建高水平学术交流平台<br>服务中国特色哲学社会科学国际传播</div>
+            <div class="banner-title">构建高水平学术交流平台，服务中国特色哲学社会科学国际传播</div>
             <div class="banner-subtitle">围绕学术合作、智库对话、成果传播与青年人才培养，持续推进多层次、宽领域、机制化的国内外学术合作网络建设。</div>
-        </div>
-        <div class="banner-badge-group">
-            <div class="banner-badge"><strong>30+</strong><span>重点合作方向</span></div>
-            <div class="banner-badge"><strong>100+</strong><span>年度交流活动</span></div>
-            <div class="banner-badge"><strong>50+</strong><span>合作研究平台</span></div>
-            <div class="banner-badge"><strong>全球化</strong><span>学术协同网络</span></div>
         </div>
     </div>
 </div>
@@ -170,6 +168,11 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </div>
             </div>
 
+            <!-- 图片插入：会议场景 -->
+            <div class="box">
+                <img src="https://www.news.cn/photo/20260325/2bd42a98a3d246f39b7dffd8bedb1822/202603252bd42a98a3d246f39b7dffd8bedb1822_20260325a72f9887552948a38634a71cd2546722.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
+            </div>
+
             <!-- 核心职能 -->
             <div id="mission" class="box">
                 <h3>核心职能</h3>
@@ -184,33 +187,55 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </ul>
             </div>
 
+            <!-- 图片插入：会议中心 -->
+            <div class="box">
+                <img src="https://www.xinhuanet.com/20260327/c4b46b4974e747cd892fcd13a76fd6df/2026032720ce22a8d7cd40699943b3690f3db02a_20260327a09d0464dd154a9989402ced81d3083d.jpeg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
+            </div>
+
             <!-- 专题图集 -->
             <div class="box">
-                <h3>专题图集</h3>
-                <p class="section-intro">通过会议论坛、合作洽谈、成果发布等多种场景，持续提升学术合作的品牌形象与社会影响力。</p>
+                <h3>交流活动</h3>
+                <p class="section-intro">选用新华社等主流媒体公开新闻图片，更贴近国内机构官网常见的信息展示风格。</p>
                 <div class="gallery-grid">
                     <div class="gallery-card">
-                        <img alt="国际学术论坛" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23971f1f'/%3E%3Cstop offset='1' stop-color='%23d85757'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Crect x='58' y='70' width='684' height='78' rx='8' fill='rgba(255,255,255,0.16)'/%3E%3Crect x='90' y='182' width='620' height='165' rx='14' fill='rgba(255,255,255,0.13)'/%3E%3Cg fill='rgba(255,255,255,0.88)'%3E%3Ccircle cx='160' cy='390' r='30'/%3E%3Crect x='130' y='422' width='60' height='44' rx='10'/%3E%3Ccircle cx='280' cy='390' r='30'/%3E%3Crect x='250' y='422' width='60' height='44' rx='10'/%3E%3Ccircle cx='400' cy='390' r='30'/%3E%3Crect x='370' y='422' width='60' height='44' rx='10'/%3E%3Ccircle cx='520' cy='390' r='30'/%3E%3Crect x='490' y='422' width='60' height='44' rx='10'/%3E%3Ccircle cx='640' cy='390' r='30'/%3E%3Crect x='610' y='422' width='60' height='44' rx='10'/%3E%3C/g%3E%3Crect x='250' y='215' width='300' height='22' rx='11' fill='rgba(255,255,255,0.85)'/%3E%3Crect x='200' y='257' width='400' height='14' rx='7' fill='rgba(255,255,255,0.72)'/%3E%3Crect x='235' y='288' width='330' height='14' rx='7' fill='rgba(255,255,255,0.55)'/%3E%3C/svg%3E">
+                        <img alt="论坛开幕式现场" src="https://www.news.cn/photo/20260325/2bd42a98a3d246f39b7dffd8bedb1822/202603252bd42a98a3d246f39b7dffd8bedb1822_20260325a72f9887552948a38634a71cd2546722.jpg">
                         <div class="gallery-body">
-                            <h4>国际学术论坛</h4>
-                            <p>围绕全球治理、文明交流、区域合作等议题举办高层次论坛，推动跨机构、跨学科、跨区域的深度对话。</p>
+                            <h4>论坛会议与专题研讨</h4>
+                            <p>围绕重点议题组织论坛、研讨会与学术交流活动，强化学界、智库与研究机构之间的高水平对话。</p>
                         </div>
                     </div>
                     <div class="gallery-card">
-                        <img alt="合作签约交流" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%238c1414'/%3E%3Cstop offset='1' stop-color='%23bd4a4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g2)'/%3E%3Crect x='95' y='86' width='610' height='300' rx='18' fill='rgba(255,255,255,0.12)'/%3E%3Cg fill='rgba(255,255,255,0.88)'%3E%3Ccircle cx='235' cy='205' r='42'/%3E%3Crect x='194' y='252' width='82' height='118' rx='14'/%3E%3Ccircle cx='565' cy='205' r='42'/%3E%3Crect x='524' y='252' width='82' height='118' rx='14'/%3E%3Crect x='317' y='230' width='166' height='82' rx='14' fill='rgba(255,255,255,0.82)'/%3E%3C/g%3E%3Cpath d='M280 290 C315 255 343 242 400 242 C455 242 485 255 520 290' stroke='rgba(255,255,255,0.72)' stroke-width='12' fill='none' stroke-linecap='round'/%3E%3Crect x='180' y='112' width='440' height='20' rx='10' fill='rgba(255,255,255,0.8)'/%3E%3C/svg%3E">
+                        <img alt="国际会议中心外景" src="https://www.xinhuanet.com/20260327/c4b46b4974e747cd892fcd13a76fd6df/2026032720ce22a8d7cd40699943b3690f3db02a_20260327a09d0464dd154a9989402ced81d3083d.jpeg">
                         <div class="gallery-body">
-                            <h4>合作签约与机制建设</h4>
-                            <p>通过双边交流、框架协议、联合研究与访问机制，不断夯实国内外学术合作的制度基础与执行路径。</p>
+                            <h4>国际合作与会议平台</h4>
+                            <p>依托高层次论坛、国际会议与合作平台，持续拓展与高校、科研机构和智库之间的交流合作网络。</p>
                         </div>
                     </div>
                     <div class="gallery-card">
-                        <img alt="成果发布与智库传播" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23a12323'/%3E%3Cstop offset='1' stop-color='%23df6b6b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g3)'/%3E%3Crect x='120' y='76' width='560' height='342' rx='22' fill='rgba(255,255,255,0.12)'/%3E%3Crect x='175' y='130' width='250' height='200' rx='14' fill='rgba(255,255,255,0.9)'/%3E%3Crect x='455' y='130' width='165' height='26' rx='13' fill='rgba(255,255,255,0.84)'/%3E%3Crect x='455' y='180' width='130' height='18' rx='9' fill='rgba(255,255,255,0.64)'/%3E%3Crect x='455' y='220' width='145' height='18' rx='9' fill='rgba(255,255,255,0.64)'/%3E%3Crect x='455' y='260' width='120' height='18' rx='9' fill='rgba(255,255,255,0.64)'/%3E%3Crect x='455' y='300' width='135' height='18' rx='9' fill='rgba(255,255,255,0.64)'/%3E%3Cpath d='M225 283 L270 220 L320 258 L375 175' stroke='%23c63b3b' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='225' cy='283' r='8' fill='%23c63b3b'/%3E%3Ccircle cx='270' cy='220' r='8' fill='%23c63b3b'/%3E%3Ccircle cx='320' cy='258' r='8' fill='%23c63b3b'/%3E%3Ccircle cx='375' cy='175' r='8' fill='%23c63b3b'/%3E%3C/svg%3E">
+                        <img alt="会场外景与活动标识" src="https://www.news.cn/photo/20260325/2bd42a98a3d246f39b7dffd8bedb1822/202603252bd42a98a3d246f39b7dffd8bedb1822_202603254f4cb2c1342742ff957fbe022e279716.jpg">
                         <div class="gallery-body">
-                            <h4>成果发布与传播展示</h4>
-                            <p>围绕高质量研究成果、专题报告与智库产品，强化学术发布、媒体传播和国际传播能力建设。</p>
+                            <h4>成果发布与活动展示</h4>
+                            <p>围绕研究报告、专题成果和重点活动开展发布与展示，增强学术成果传播的专业性与规范性。</p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- 要闻 / 通知公告 -->
+            <div class="box">
+                <h3>要闻动态</h3>
+                <ul class="news-list">
+                    <li><a href="#">2026年学术交流与合作重点工作部署会议在京召开</a><span class="news-source">2026-03-18</span></li>
+                    <li><a href="#">国际比较研究专题研讨会顺利举行 多国学者参与</a><span class="news-source">2026-03-05</span></li>
+                    <li><a href="#">中国社会科学院与多家海外智库签署合作备忘录</a><span class="news-source">2026-02-26</span></li>
+                    <li><a href="#">青年学者国际交流计划（2026年度）正式启动</a><span class="news-source">2026-02-12</span></li>
+                    <li><a href="#">全球治理与区域发展专题论坛在上海召开</a><span class="news-source">2026-01-28</span></li>
+                </ul>
+            </div>
+
+            <!-- 图片插入：论坛现场 -->
+            <div class="box">
+                <img src="https://www.news.cn/photo/20260325/2bd42a98a3d246f39b7dffd8bedb1822/202603252bd42a98a3d246f39b7dffd8bedb1822_202603254f4cb2c1342742ff957fbe022e279716.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
             </div>
 
             <!-- 新闻动态 -->
@@ -260,6 +285,24 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
                 </ul>
             </div>
 
+            <!-- 图片插入：交流活动 -->
+            <div class="box">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" style="width:100%;height:260px;object-fit:cover;border-radius:6px;">
+            </div>
+
+            <!-- 合作项目 -->
+            <div class="box">
+                <h3>重点合作项目</h3>
+                <p class="section-intro">围绕全球治理、区域发展、文化交流等重点方向，推进多项国际合作研究与交流项目。</p>
+                <ul>
+                    <li>“全球治理与多边合作机制”联合研究项目（2024–2026）</li>
+                    <li>中欧智库合作与政策对话平台建设项目</li>
+                    <li>“一带一路”区域研究与学术网络协同计划</li>
+                    <li>国际青年学者联合培养与交流项目</li>
+                    <li>中国学术成果国际传播与外译支持项目</li>
+                </ul>
+            </div>
+
             <!-- 学术成果 -->
             <div id="achievement" class="box">
                 <h3>学术成果</h3>
@@ -295,11 +338,16 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 
         <!-- 右侧栏目 -->
         <div class="right">
-            <div class="side-figure">
-                <img alt="学术会议视觉图" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 420'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23981e1e'/%3E%3Cstop offset='1' stop-color='%23cc5a5a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='700' height='420' fill='url(%23s1)'/%3E%3Crect x='78' y='72' width='544' height='106' rx='14' fill='rgba(255,255,255,0.14)'/%3E%3Crect x='120' y='210' width='460' height='96' rx='16' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='180' cy='352' r='26' fill='rgba(255,255,255,0.9)'/%3E%3Ccircle cx='280' cy='352' r='26' fill='rgba(255,255,255,0.9)'/%3E%3Ccircle cx='380' cy='352' r='26' fill='rgba(255,255,255,0.9)'/%3E%3Ccircle cx='480' cy='352' r='26' fill='rgba(255,255,255,0.9)'/%3E%3C/svg%3E">
-                <div class="side-figure-caption">聚焦高端论坛、专题研讨与联合发布，持续提升学术平台的专业形象与社会影响力。</div>
+            <div class="box">
+                <h3>通知公告</h3>
+                <ul class="news-list">
+                    <li><a href="#">关于举办2026年国际学术论坛的通知</a></li>
+                    <li><a href="#">学术交流项目申报指南（2026年度）</a></li>
+                    <li><a href="#">青年学者国际研修计划报名通知</a></li>
+                    <li><a href="#">国际合作项目阶段性成果申报说明</a></li>
+                </ul>
             </div>
-
+        <div class="right">
             <div id="exchange" class="box">
                 <h3>学术交流</h3>
                 <ul class="news-list">
@@ -313,10 +361,11 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
             <div class="box">
                 <h3>联系与服务</h3>
                 <ul class="contact-list">
+                    <li>办公地址：北京市东城区建国门内大街5号（中国社会科学院）</li>
+                    <li>联系电话：010-8519 5000</li>
+                    <li>电子邮箱：info@cssna.org.cn</li>
                     <li>服务方向：学术论坛、国际合作、智库交流、成果传播</li>
                     <li>工作机制：项目统筹、活动组织、专题联络、合作对接</li>
-                    <li>面向对象：高校、科研机构、智库平台、青年学者与研究团队</li>
-                    <li>服务目标：推动高水平学术合作与高质量成果传播</li>
                 </ul>
             </div>
 
@@ -336,7 +385,10 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 
 <!-- 底部 -->
 <div class="footer">
-    <div class="container">中国社会科学院-学术交流与合作学部 © 版权所有 | 官方网站</div>
+    <div class="container">
+        中国社会科学院-学术交流与合作学部 © 版权所有<br>
+        地址：北京市东城区建国门内大街5号 ｜ 邮箱：info@cssna.org.cn
+    </div>
 </div>
 
 </body>
