@@ -11,10 +11,11 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 
 /* 头部 */
 .header{background:#a81c1c;color:#fff;padding:25px 0}
-.header-content{display:flex;align-items:center;justify-content:center;gap:25px;flex-wrap:wrap}
-.logo{height:90px;width:auto;object-fit:contain}
-.cn-name{font-size:30px;font-weight:700;margin-bottom:8px;letter-spacing:1px}
-.en-name{font-size:17px;opacity:.95}
+.header-content{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap}
+.logo-wrap{background:#fff;padding:8px 12px;border-radius:4px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.logo{height:62px;width:auto;object-fit:contain;display:block}
+.cn-name{font-size:28px;font-weight:700;margin-bottom:6px;letter-spacing:0.5px;line-height:1.35}
+.en-name{font-size:15px;opacity:.92;line-height:1.55;max-width:980px}
 
 /* 导航 */
 .nav{background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:999}
@@ -104,6 +105,11 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
   .gallery-grid,.stat-grid,.feature-list{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width: 768px){
+  .header-content{gap:14px}
+  .logo-wrap{padding:6px 10px}
+  .logo{height:52px}
+  .cn-name{font-size:22px}
+  .en-name{font-size:13px}
   .cn-name{font-size:24px}
   .en-name{font-size:14px}
   .nav li{padding:14px 16px}
@@ -124,7 +130,9 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 <!-- 头部 -->
 <div class="header">
     <div class="container header-content">
-        <img src="pic0.jpg" class="logo" alt="中国社会科学院logo">
+        <div class="logo-wrap">
+            <img src="pic0.jpg" class="logo" alt="中国社会科学院logo">
+        </div>
         <div>
             <div class="cn-name">中国社会科学院-学术交流与合作学部</div>
             <div class="en-name">National Academy of Academic Exchange and Cooperation, Chinese Academy of Social Sciences (CSSNA)</div>
