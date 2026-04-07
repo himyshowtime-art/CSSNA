@@ -12,8 +12,8 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 /* 头部 */
 .header{background:#ffffff;color:#1a1a1a;padding:16px 0 14px;border-bottom:2px solid #2f6fa5}
 .header-content{display:flex;align-items:center;justify-content:flex-start;gap:24px;flex-wrap:nowrap;max-width:1200px;margin:0 auto;padding:0 10px}
-.logo-wrap{background:transparent;padding:0;border-radius:0;display:flex;align-items:center;justify-content:center;border:none}
-.logo{height:140px;width:auto;object-fit:contain;display:block}
+.logo-wrap{display:flex;align-items:center;justify-content:center;flex:0 0 auto;overflow:hidden;height:120px;width:140px}
+.logo{height:150px;width:auto;object-fit:cover;display:block;transform:scale(1.12);}
 .cn-name{font-size:28px;font-weight:700;margin-bottom:4px;letter-spacing:0;line-height:1.3;color:#1a1a1a}
 .en-name{font-size:14px;opacity:.9;line-height:1.5;max-width:980px;color:#4a6b8a}
 
@@ -40,8 +40,8 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 .main{display:flex;gap:40px;margin:40px 0;flex-wrap:wrap}
 .left{flex:1;min-width:700px}
 .right{width:350px}
-.box{background:#fff;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.04);padding:32px;margin-bottom:26px;border:1px solid #e9e9e9}
-.box h3{font-size:22px;color:#8f1f1f;padding-left:0;margin-bottom:22px;font-weight:700}
+.box{background:#fff;border-radius:4px;box-shadow:none;padding:28px;margin-bottom:22px;border:1px solid #e7e7e7}
+.box h3{font-size:21px;color:#2f6fa5;padding-left:0;margin-bottom:18px;font-weight:700;border-bottom:1px solid #e9edf2;padding-bottom:8px}
 .box p{font-size:16px;margin-bottom:15px;color:#444}
 .box ul{padding-left:20px}
 .box li{margin-bottom:10px;font-size:16px;color:#444}
@@ -50,21 +50,21 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 /* 数据概览 */
 .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:24px}
 .stat-card{background:#fafafa;border:1px solid #eee;border-radius:6px;padding:20px;text-align:center}
-.stat-card strong{display:block;font-size:28px;color:#8f1f1f;margin-bottom:6px}
+.stat-card strong{display:block;font-size:28px;color:#2f6fa5;margin-bottom:6px}
 .stat-card span{font-size:14px;color:#666}
 
 /* 图片模块 */
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.gallery-card{border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fff;box-shadow:none}
-.gallery-card img{width:100%;height:180px;display:block;object-fit:cover;background:#f3f3f3}
-.gallery-body{padding:16px}
+.gallery-card{border:1px solid #eee;border-radius:6px;overflow:hidden;background:#fff;box-shadow:none}
+.gallery-card img{width:100%;height:190px;display:block;object-fit:cover;background:#f3f3f3}
+.gallery-body{padding:14px 16px 16px}
 .gallery-body h4{font-size:17px;color:#222;margin-bottom:8px}
 .gallery-body p{font-size:14px;color:#666;line-height:1.8;margin:0}
 
 /* 工作模块 */
 .feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;list-style:none;padding-left:0;margin-top:8px}
 .feature-item{background:#fafafa;border:1px solid #eee;border-radius:6px;padding:18px 18px 16px}
-.feature-item h4{font-size:18px;color:#8f1f1f;margin-bottom:8px}
+.feature-item h4{font-size:18px;color:#2f6fa5;margin-bottom:8px}
 .feature-item p{font-size:15px;color:#555;margin-bottom:0}
 
 /* 新闻列表 */
@@ -72,17 +72,17 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
 .news-list li{padding:12px 0;border-bottom:1px solid #eee}
 .news-list li:last-child{border-bottom:none}
 .news-list a{color:#333;text-decoration:none;font-size:16px;display:block;line-height:1.7}
-.news-list a:hover{color:#8f1f1f}
+.news-list a:hover{color:#2f6fa5}
 .news-source{display:block;font-size:13px;color:#888;margin-top:4px}
 
 .news-card-list{display:grid;grid-template-columns:1fr;gap:18px}
 .news-card{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid #eee}
 .news-card:first-child{padding-top:0}
 .news-card:last-child{border-bottom:none;padding-bottom:0}
-.news-card img{width:100%;height:130px;object-fit:cover;border-radius:6px;display:block}
+.news-card img{width:100%;height:140px;object-fit:cover;border-radius:4px;display:block}
 .news-card-content h4{font-size:18px;line-height:1.6;color:#222;margin-bottom:8px;font-weight:600}
 .news-card-content h4 a{color:#222;text-decoration:none}
-.news-card-content h4 a:hover{color:#8f1f1f}
+.news-card-content h4 a:hover{color:#2f6fa5}
 .news-card-content p{font-size:14px;line-height:1.9;color:#666;margin-bottom:8px}
 .news-meta{font-size:13px;color:#888}
 
@@ -191,6 +191,16 @@ body{background:#f5f5f5;color:#333;line-height:1.9}
             <!-- 学部概况 -->
             <div class="box">
                 <img src="pic1.jpg" style="width:100%;height:260px;object-fit:cover;border-radius:6px;margin-bottom:20px;">
+            </div>
+
+            <div class="box" style="padding:0;overflow:hidden;">
+                <div style="position:relative;">
+                    <img src="pic12.jpg" style="width:100%;height:320px;object-fit:cover;display:block;">
+                    <div style="position:absolute;left:0;right:0;bottom:0;padding:22px 26px;background:linear-gradient(to top, rgba(16,34,52,.68), rgba(16,34,52,.18), rgba(16,34,52,0));color:#fff;">
+                        <div style="font-size:24px;font-weight:700;line-height:1.5;margin-bottom:6px;">学术交流与合作会议现场</div>
+                        <div style="font-size:14px;line-height:1.8;opacity:.96;max-width:780px;">围绕国际学术合作、智库对话、成果传播与平台建设等重点方向，持续推进高水平、多层次、机制化交流合作。</div>
+                    </div>
+                </div>
             </div>
 
             <div id="about" class="box">
